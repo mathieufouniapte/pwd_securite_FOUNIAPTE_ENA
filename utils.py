@@ -1,5 +1,18 @@
 import os
 import platform
+import logging
+
+# Configuration du fichier de log
+logging.basicConfig(
+    filename='app.log', 
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%d/%m/%Y %H:%M:%S'
+)
+
+def log_evenement(message):
+    """Enregistre un message dans le fichier app.log"""
+    logging.info(message)
 
 def effacer_ecran():
     """Nettoie la console selon le système d'exploitation."""
