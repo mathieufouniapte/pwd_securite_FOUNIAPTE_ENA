@@ -3,7 +3,7 @@ import re
 def est_commun(mdp):
     try:
         # On ouvre le fichier en mode lecture ('r')
-        with open('common_passwords.txt', 'r') as f:
+        with open('liste_noire_pwd.txt', 'r') as f:
             # On lit chaque ligne et on enlève les espaces/sauts de ligne
             mots_communs = [ligne.strip() for ligne in f]
             return mdp.lower() in mots_communs
